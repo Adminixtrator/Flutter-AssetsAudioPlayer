@@ -27,7 +27,7 @@ import android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
 import android.support.v4.media.session.MediaSessionCompat
 import androidx.annotation.RequiresApi
 import com.github.florent37.assets_audio_player.AssetsAudioPlayerPlugin
-import com.github.florent37.assets_audio_player.R
+import com.google.android.exoplayer2.ui.R
 
 class NotificationService : Service() {
 
@@ -165,7 +165,7 @@ class NotificationService : Service() {
     }
 
     private fun getSmallIcon(context: Context): Int {
-        return getCustomIconOrDefault(context, manifestIcon, null, R.drawable.exo_icon_circular_play)
+        return getCustomIconOrDefault(context, manifestIcon, null, R.drawable.exo_notification_play)
     }
 
     private fun getPlayIcon(context: Context, resourceName: String?): Int {
